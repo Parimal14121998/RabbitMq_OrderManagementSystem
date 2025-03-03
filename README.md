@@ -28,8 +28,8 @@ rabbitmq1.1/
 
 # Installation
 1. Clone the Repository
-git clone https://github.com/your-username/rabbitmq-order-processing.git
-cd rabbitmq1.1 
+* git clone https://github.com/Parimal14121998/RabbitMq_OrderManagementSystem
+* cd rabbitmq1.1 
 2. Install Dependencies
 pip install -r requirements.txt
 3. Set Up RabbitMQ
