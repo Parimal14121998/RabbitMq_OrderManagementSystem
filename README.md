@@ -24,16 +24,15 @@ rabbitmq1.1/
 * ├── email_service.py        # Service to send email confirmations
 * ├── requirements.txt        # Python dependencies
 * ├── README.md               # Project documentation
-* └── Dockerfile              # Docker configuration (if applicable)
 
 # Installation
 1. Clone the Repository
 * git clone https://github.com/Parimal14121998/RabbitMq_OrderManagementSystem
 * cd rabbitmq1.1 
 2. Install Dependencies
-pip install -r requirements.txt
+* pip install -r requirements.txt
 3. Set Up RabbitMQ
-docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management
+* docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management
 
 
 # Usage
