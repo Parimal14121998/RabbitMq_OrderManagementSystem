@@ -4,17 +4,17 @@
 This project is a microservices-based order processing system built using Flask-RESTX and RabbitMQ. The system demonstrates the use of RabbitMQ as an event-driven messaging broker that allows multiple services (Payment Service, Inventory Service, and Email Service) to process the same order message in sequence. It ensures that the Payment, Inventory, and Email processes are handled in the correct order, with each service processing the message independently.
 
 # Features
-Order Placement: An API endpoint that allows users to place an order.
-Payment Processing: The Payment Service processes the payment and sends the message to the next service (Inventory Service).
-Inventory Management: The Inventory Service updates the stock based on successful payment and notifies the next service (Email Service).
-Email Confirmation: The Email Service sends an email confirmation once inventory is updated.
+* Order Placement: An API endpoint that allows users to place an order.
+* Payment Processing: The Payment Service processes the payment and sends the message to the next service (Inventory Service).
+* Inventory Management: The Inventory Service updates the stock based on successful payment and notifies the next service (Email Service).
+* Email Confirmation: The Email Service sends an email confirmation once inventory is updated.
 
 # Technologies Used
-Python: Backend framework for building the API and services.
-Flask-RESTX: A simple and easy-to-use framework for building RESTful APIs.
-RabbitMQ: Message broker to facilitate communication between services using queues and exchanges.
-Pika: Python library for interacting with RabbitMQ.
-JSON: Data format used for communication between services.
+* Python: Backend framework for building the API and services.
+* Flask-RESTX: A simple and easy-to-use framework for building RESTful APIs.
+* RabbitMQ: Message broker to facilitate communication between services using queues and exchanges.
+* Pika: Python library for interacting with RabbitMQ.
+* JSON: Data format used for communication between services.
 
 # Project Structure
 rabbitmq1.1/
