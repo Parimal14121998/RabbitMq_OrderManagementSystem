@@ -18,13 +18,13 @@ This project is a microservices-based order processing system built using Flask-
 
 # Project Structure
 rabbitmq1.1/
-├── app.py                  # Flask-RESTX app with order API
-├── payment_service.py      # Service to process payments
-├── inventory_service.py    # Service to manage inventory
-├── email_service.py        # Service to send email confirmations
-├── requirements.txt        # Python dependencies
-├── README.md               # Project documentation
-└── Dockerfile              # Docker configuration (if applicable)
+* ├── app.py                  # Flask-RESTX app with order API
+* ├── payment_service.py      # Service to process payments
+* ├── inventory_service.py    # Service to manage inventory
+* ├── email_service.py        # Service to send email confirmations
+* ├── requirements.txt        # Python dependencies
+* ├── README.md               # Project documentation
+* └── Dockerfile              # Docker configuration (if applicable)
 
 # Installation
 1. Clone the Repository
@@ -49,11 +49,11 @@ python email_service.py
 3. Testing the Order API
 curl -X POST http://localhost:5000/api/orders -d '{"product_id": 1, "quantity": 2, "user_id": 100}' -H "Content-Type: application/json"
 
-RabbitMQ Flow Explanation
-1.Order Service publishes a message to RabbitMQ with the routing key order.created.
-2.The Payment Service consumes the message, processes the payment, and sends a new message with the routing key payment.success.
-3.The Inventory Service consumes the payment.success message, updates the inventory, and sends a message with the routing key inventory.updated.
-4.Finally, the Email Service consumes the inventory.updated message and sends an email confirmation to the user.
+# RabbitMQ Flow Explanation
+* 1.Order Service publishes a message to RabbitMQ with the routing key order.created.
+* 2.The Payment Service consumes the message, processes the payment, and sends a new message with the routing key payment.success.
+* 3.The Inventory Service consumes the payment.success message, updates the inventory, and sends a message with the routing key inventory.updated.
+* 4.Finally, the Email Service consumes the inventory.updated message and sends an email confirmation to the user.
 
 # Testing
 You can test the functionality of the entire system by:
